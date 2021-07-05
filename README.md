@@ -77,4 +77,4 @@ For each endpoint write integration tests.
 ## Some helpful links
 
 * https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-5.0&tabs=visual-studio
-* https://docs.microsoft.com/en-us/dotnet/api/nunit.framework.assert?view=xamarin-ios-sdk-12
+* https://docs.microsoft.com/en-us/dotnet/api/nunit.framework.assert

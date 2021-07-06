@@ -3,14 +3,16 @@ using System;
 using CodingDay.Data.DataContexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CodingDay.Data.Migrations
 {
     [DbContext(typeof(SqlDataContext))]
-    partial class SqlDataContextModelSnapshot : ModelSnapshot
+    [Migration("20210706061210_AddUserTeamTable")]
+    partial class AddUserTeamTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -54,14 +56,6 @@ namespace CodingDay.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Teams");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Description = "Coding Day Team",
-                            Name = "Coding Day Team"
-                        });
                 });
 
             modelBuilder.Entity("CodingDay.Entities.Users.User", b =>
@@ -106,13 +100,6 @@ namespace CodingDay.Data.Migrations
                     b.HasIndex("TeamId");
 
                     b.ToTable("UserTeams");
-
-                    b.HasData(
-                        new
-                        {
-                            UserId = 1,
-                            TeamId = 1
-                        });
                 });
 
             modelBuilder.Entity("CodingDay.Entities.Users.UserTeam", b =>
